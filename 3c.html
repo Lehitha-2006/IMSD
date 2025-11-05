@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Types Example</title>
+    
+    <!-- External CSS simulation -->
+    <style>
+        /* Imagine this is in an external file called style.css */
+        .external h1 {
+            color: blue;
+        }
+        .external p {
+            color: darkgreen;
+        }
+    </style>
+
+    <!-- Internal CSS -->
+    <style>
+        .internal {
+            background-color: lightyellow;
+        }
+        .internal h1 {
+            color: purple;
+        }
+        .internal p {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- External CSS styled section -->
+    <div class="external">
+        <h1>This is a heading (External CSS)</h1>
+        <p>This is a paragraph (External CSS)</p>
+    </div>
+
+    <!-- Internal CSS styled section -->
+    <div class="internal">
+        <h1>This is a heading (Internal CSS)</h1>
+        <p>This is a paragraph (Internal CSS)</p>
+    </div>
+
+    <!-- Inline CSS styled section -->
+    <div>
+        <h1 style="color: green; text-align: center;">This is a heading (Inline CSS)</h1>
+        <p style="color: orange;">This is a paragraph (Inline CSS)</p>
+    </div>
+
+</body>
+</html>

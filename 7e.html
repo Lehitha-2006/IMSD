@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Example</title>
+</head>
+<body>
+  <h2>JavaScript String Object Demo</h2>
+  <button onclick="showStringExamples()">Show String Properties & Methods</button>
+
+  <p id="output"></p>
+
+  <script>
+    function showStringExamples() {
+      let str = " Hello JavaScript ";
+      let str2 = "World";
+
+      let result = `
+        <b>String Properties:</b><br>
+        str = "${str}" <br>
+        str.length = ${str.length} <br><br>
+
+        <b>String Methods:</b><br>
+        1. str.toUpperCase() = ${str.toUpperCase()} <br>
+        2. str.toLowerCase() = ${str.toLowerCase()} <br>
+        3. str.charAt(1) = ${str.charAt(1)} <br>
+        4. str.charCodeAt(1) = ${str.charCodeAt(1)} <br>
+        5. str.indexOf("Java") = ${str.indexOf("Java")} <br>
+        6. str.lastIndexOf("a") = ${str.lastIndexOf("a")} <br>
+        7. str.includes("Hello") = ${str.includes("Hello")} <br>
+        8. str.startsWith(" Hello") = ${str.startsWith(" Hello")} <br>
+        9. str.endsWith("Script ") = ${str.endsWith("Script ")} <br>
+        10. str.slice(1, 6) = ${str.slice(1, 6)} <br>
+        11. str.substring(1, 6) = ${str.substring(1, 6)} <br>
+        12. str.substr(1, 5) = ${str.substr(1, 5)} <br>
+        13. str.replace("JavaScript", "World") = ${str.replace("JavaScript", "World")} <br>
+        14. str.concat(" ", str2) = ${str.concat(" ", str2)} <br>
+        15. str.split(" ") = [${str.split(" ")}] <br>
+        16. str.trim() = "${str.trim()}" <br>
+        17. str.repeat(2) = ${str.repeat(2)}
+      `;
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Looping in JavaScript</title>
+  <script>
+    function showData() {
+      let student = {
+        name: "Lehitha",
+        age: 19,
+        branch: "CSE",
+        college: "Aditya University"
+      };
+
+      document.write("<h2>Using for...in loop:</h2>");
+      for (let key in student) {
+        document.write(key + ": " + student[key] + "<br>");
+      }
+
+      document.write("<h2>Using forEach loop:</h2>");
+      Object.entries(student).forEach(function([key, value]) {
+        document.write(key + ": " + value + "<br>");
+      });
+
+      document.write("<h2>Using for...of loop:</h2>");
+      for (let [key, value] of Object.entries(student)) {
+        document.write(key + ": " + value + "<br>");
+      }
+    }
+  </script>
+</head>
+<body onload="showData()">
+</body>
+</html>

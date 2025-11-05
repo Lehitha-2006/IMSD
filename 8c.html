@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print 1 to 10 using JS loops</title>
+</head>
+<body>
+    <h2>Printing numbers 1 to 10 using different loops</h2>
+
+    <div id="output"></div> <!-- This is where output will appear -->
+
+    <script>
+        // Get the output div
+        let output = document.getElementById("output");
+
+        // Helper function to add text to the page
+        function printLine(text) {
+            output.innerHTML += text + "<br>";
+        }
+
+        printLine("=== Using for loop ===");
+        for (let i = 1; i <= 10; i++) {
+            printLine(i);
+        }
+
+        printLine("<hr>"); // horizontal line
+
+        printLine("=== Using while loop ===");
+        let j = 1;
+        while (j <= 10) {
+            printLine(j);
+            j++;
+        }
+
+        printLine("<hr>");
+
+        printLine("=== Using do...while loop ===");
+        let k = 1;
+        do {
+            printLine(k);
+            k++;
+        } while (k <= 10);
+
+        printLine("<hr>");
+        printLine("=== End of Program ===");
+    </script>
+</body>
+</html>

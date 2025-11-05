@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Example</title>
+</head>
+<body>
+  <h2>JavaScript Date Object Demo</h2>
+  <button onclick="showDateExamples()">Show Date Properties & Methods</button>
+
+  <p id="output"></p>
+
+  <script>
+    function showDateExamples() {
+      let now = new Date(); // current date & time
+      let future = new Date(2030, 11, 25, 10, 30, 0); // Dec 25, 2030, 10:30:00
+
+      let result = `
+        <b>Date Properties / Getters:</b><br>
+        1. now.getFullYear() = ${now.getFullYear()} <br>
+        2. now.getMonth() = ${now.getMonth()} <br>
+        3. now.getDate() = ${now.getDate()} <br>
+        4. now.getDay() = ${now.getDay()} <br>
+        5. now.getHours() = ${now.getHours()} <br>
+        6. now.getMinutes() = ${now.getMinutes()} <br>
+        7. now.getSeconds() = ${now.getSeconds()} <br>
+        8. now.getMilliseconds() = ${now.getMilliseconds()} <br>
+        9. now.getTime() = ${now.getTime()} <br><br>
+
+        <b>Date Methods / Setters & Formatting:</b><br>
+        10. now.toDateString() = ${now.toDateString()} <br>
+        11. now.toTimeString() = ${now.toTimeString()} <br>
+        12. now.toLocaleDateString() = ${now.toLocaleDateString()} <br>
+        13. now.toLocaleTimeString() = ${now.toLocaleTimeString()} <br>
+        14. now.toUTCString() = ${now.toUTCString()} <br>
+        15. future.setFullYear(2035) → future = ${future.setFullYear(2035)}, updated future = ${future} <br>
+        16. future.setMonth(0) → January, updated future = ${future.setMonth(0)}, future = ${future} <br>
+        17. future.setDate(1) → future = ${future.setDate(1)}, updated future = ${future} <br>
+        18. future.setHours(9, 45, 0) → future = ${future.setHours(9, 45, 0)}, updated future = ${future} <br>
+        19. future.toISOString() = ${future.toISOString()} <br>
+        20. future.toJSON() = ${future.toJSON()}
+      `;
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

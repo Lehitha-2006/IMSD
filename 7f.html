@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Example</title>
+</head>
+<body>
+  <h2>JavaScript RegExp Object Demo</h2>
+  <button onclick="showRegexExamples()">Show RegExp Properties & Methods</button>
+
+  <p id="output"></p>
+
+  <script>
+    function showRegexExamples() {
+      let regex = /hello/gi;   // pattern: "hello", flags: global + ignoreCase
+      let str = "Hello world! hello JavaScript, HELLO regex, hello again!";
+
+      let result = `
+        <b>RegExp Properties:</b><br>
+        regex.source = ${regex.source} <br>
+        regex.global = ${regex.global} <br>
+        regex.ignoreCase = ${regex.ignoreCase} <br>
+        regex.multiline = ${regex.multiline} <br>
+        regex.lastIndex = ${regex.lastIndex} <br><br>
+
+        <b>RegExp & String Methods using Regex:</b><br>
+        1. regex.test(str) = ${regex.test(str)} <br>
+        2. regex.exec(str) = ${regex.exec(str)} <br>
+        3. str.match(regex) = ${str.match(regex)} <br>
+        4. str.matchAll(regex) = ${[...str.matchAll(regex)]} <br>
+        5. str.search(regex) = ${str.search(regex)} <br>
+        6. str.replace(regex, "hi") = ${str.replace(regex, "hi")} <br>
+        7. str.replaceAll(regex, "hi") = ${str.replaceAll(regex, "hi")} <br>
+        8. str.split(regex) = [${str.split(regex)}] <br>
+        9. regex.toString() = ${regex.toString()} <br>
+        10. regex.compile ? "deprecated in JS" : "compile() not available" <br>
+        11. "HELLO".match(/hello/i) = ${"HELLO".match(/hello/i)} <br>
+        12. "abc123".replace(/[0-9]/g, "*") = ${"abc123".replace(/[0-9]/g, "*")} <br>
+        13. "cat bat mat".match(/\b\w{3}\b/g) = ${"cat bat mat".match(/\b\w{3}\b/g)} <br>
+        14. "2025-09-03".match(/\\d+/g) = ${"2025-09-03".match(/\d+/g)} <br>
+        15. "email@test.com".match(/^[\\w.-]+@[\\w.-]+\\.\\w+$/) = ${"email@test.com".match(/^[\w.-]+@[\w.-]+\.\w+$/)}
+      `;
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

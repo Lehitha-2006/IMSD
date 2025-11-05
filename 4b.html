@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Combinator Selectors</title>
+    <style>
+        /* 1. Descendant Selector - all <p> inside <div> */
+        div p {
+            color: blue;
+        }
+
+        /* 2. Child Selector - only direct <p> children of <div> */
+        div > p {
+            font-weight: bold;
+        }
+
+        /* 3. Adjacent Sibling Selector - <p> immediately after <h2> */
+        h2 + p {
+            color: green;
+        }
+
+        /* 4. General Sibling Selector - all <p> after <h2> */
+        h2 ~ p {
+            background-color: yellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Combinator Selectors Example</h1>
+
+    <div>
+        <p>Descendant Selector (all <p> inside div)</p>
+        <p>Child Selector (only direct <p> children of div)</p>
+    </div>
+
+    <h2>Adjacent Sibling Selector</h2>
+    <p>This paragraph is immediately after h2 (green).</p>
+    <p>This paragraph is a general sibling of h2 (yellow).</p>
+    <p>Another general sibling of h2 (yellow).</p>
+
+</body>
+</html>
