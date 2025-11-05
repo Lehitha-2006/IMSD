@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attribute Selectors Example</title>
+    <style>
+        /* Select all input elements with type="text" */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+
+        /* Select all links with target="_blank" */
+        a[target="_blank"] {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Select all images with alt attribute */
+        img[alt] {
+            border: 2px solid green;
+            width: 100px;
+        }
+
+        /* Select all inputs with placeholder attribute containing 'Name' */
+        input[placeholder*="Name"] {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Attribute Selectors Example</h1>
+
+    <!-- Input type text -->
+    <input type="text" placeholder="Enter Your Name"><br><br>
+
+    <!-- Links -->
+    <a href="https://example.com" target="_blank">Open Example.com</a><br>
+    <a href="https://google.com">Open Google</a><br><br>
+
+    <!-- Images -->
+    <img src="image1.jpg" alt="Sample Image">
+    <img src="image2.jpg">
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo-class Selectors</title>
+    <style>
+        /* Hover pseudo-class */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* First-child pseudo-class */
+        li:first-child {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Last-child pseudo-class */
+        li:last-child {
+            color: green;
+            font-style: italic;
+        }
+
+        /* Nth-child pseudo-class */
+        li:nth-child(2) {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-class Selectors Example</h1>
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Last item</li>
+    </ul>
+
+    <a href="#">Hover over this link</a>
+
+</body>
+</html>

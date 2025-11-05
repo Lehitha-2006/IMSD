@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo-element Selectors</title>
+    <style>
+        /* ::first-letter - style the first letter of a paragraph */
+        p::first-letter {
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* ::first-line - style the first line of a paragraph */
+        p::first-line {
+            color: blue;
+            font-style: italic;
+        }
+
+        /* ::before - insert content before an element */
+        h2::before {
+            content: "★ ";
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-element Selectors Example</h1>
+
+    <h2>Heading with ::before</h2>
+    <p>This paragraph demonstrates ::first-letter and ::first-line pseudo-elements. Notice how the first letter is bigger and the first line has a different color.</p>
+
+</body>
+</html>
