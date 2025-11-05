@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Output Methods</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("This is an alert output!");
+        }
+
+        function showDocument() {
+            document.write("This is output using document.write()<br>");
+        }
+
+        function showConsole() {
+            console.log("This is output using console.log()");
+            document.getElementById("output").innerText = "Check console for output.";
+        }
+
+        function showInnerHTML() {
+            document.getElementById("output").innerHTML = "This is output using innerHTML!";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Different Ways to Display Output in JavaScript</h1>
+
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showDocument()">Document.write()</button>
+    <button onclick="showConsole()">Console.log()</button>
+    <button onclick="showInnerHTML()">innerHTML</button>
+
+    <div id="output"></div>
+
+</body>
+</html>
